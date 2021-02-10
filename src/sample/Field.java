@@ -41,30 +41,30 @@ public class Field {
 
     void move(int direction) {
         switch (direction) {
-            case 37:
-                for(int i=0;i<size;i++){
-                    changeRow(37,i);
+            case 37 -> {
+                for (int i = 0; i < size; i++) {
+                    changeRow(37, i);
                 }
                 generateCell();
-                break;
-            case 38:
-                for(int i=0;i<size;i++){
-                    changeColumn(38,i);
+            }
+            case 38 -> {
+                for (int i = 0; i < size; i++) {
+                    changeColumn(38, i);
                 }
                 generateCell();
-                break;
-            case 39:
-                for(int i=0;i<size;i++){
-                    changeRow(39,i);
+            }
+            case 39 -> {
+                for (int i = 0; i < size; i++) {
+                    changeRow(39, i);
                 }
                 generateCell();
-                break;
-            case 40:
-                for(int i=0;i<size;i++){
-                    changeColumn(40,i);
+            }
+            case 40 -> {
+                for (int i = 0; i < size; i++) {
+                    changeColumn(40, i);
                 }
                 generateCell();
-                break;
+            }
         }
     }
 

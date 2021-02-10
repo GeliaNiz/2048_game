@@ -24,7 +24,9 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setScene(new Scene(root, 600, 500));
+        Scene scene=new Scene(root, 600, 500);
+        scene.getRoot().requestFocus();
+        primaryStage.setScene(scene);
         primaryStage.setTitle("2048_game");
         primaryStage.show();
     }
@@ -32,20 +34,8 @@ public class Main extends Application {
     public static void main(String[] args) throws InterruptedException {
         launch(args);
         }
-    public Parent initial() {
-        Scanner scanner = new Scanner(System.in);
-        Field field = new Field();
-        while (true) {
-            field.print();
-            System.out.println("w-вверх");
-            System.out.println("a-влево");
-            System.out.println("d-вправо");
-            System.out.println("s-вниз");
-            symb = scanner.nextLine();
-            keyCode = keyPressed(symb);
-            field.move(keyCode);
-            System.out.println();
-        }
+    public void init(){
+            field.initialize();
     }
     public static int keyPressed(String s) {
             switch (s){
